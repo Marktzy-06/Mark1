@@ -1,1 +1,1 @@
-# Mark1
+Smart Home Automation Dashboard
