@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Home Automation Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- DARK MODE TOGGLE -->
+<div id="theme-toggle">
+    🌙 <span>Dark Mode</span>
+    <label class="switch">
+        <input type="checkbox" id="darkModeSwitch" onchange="toggleDarkMode()">
+        <span class="slider"></span>
+    </label>
+</div>
+
+<!-- SIGNUP FORM -->
+<div id="signup-box" class="box">
+    <h2>Smart Home Sign Up</h2>
+
+    <input id="new-username" type="text" placeholder="Username">
+    <input id="first-name" type="text" placeholder="Firstname">
+    <input id="last-name" type="text" placeholder="Lastname">
+    <input id="new-email" type="email" placeholder="Email">
+    <input id="new-password" type="password" placeholder="Password">
+    <input id="confirm-password" type="password" placeholder="Confirm Password">
+
+    <button onclick="signup()">Sign Up</button>
+
+    <p style="color: white;">
+        Already have an account?
+        <span class="link" onclick="showLogin()">Login</span>
+    </p>
+</div>
+
+<!-- LOGIN FORM -->
+<div id="login-box" class="box" style="display:none;">
+    <h2>Smart Home Login</h2>
+
+    <input id="username" type="text" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p style="color: white;">
+        Don’t have an account?
+        <span class="link" onclick="showSignup()">Sign Up</span>
+    </p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" style="display:none;">
+    <h1 style="text-align: center;">🏠 Smart Home Dashboard</h1>
+    <button id="logout-btn" onclick="logout()" class="logout-btn">Logout</button>
+
+    <!-- Devices -->
+    <div class="card">
+        <h2>Device Controls</h2>
+
+        <div class="device">
+            <span>Light</span>
+            <div class="toggle" id="light" onclick="toggleDevice('Light','light')">
+                <div class="toggle-circle"></div>
+            </div>
+        </div>
+
+        <div class="device">
+            <span>Fan</span>
+            <div class="toggle" id="fan" onclick="toggleDevice('Fan','fan')">
+                <div class="toggle-circle"></div>
+            </div>
+        </div>
+
+        <div class="device">
+            <span>Main Door</span>
+            <div class="toggle" id="door" onclick="toggleDevice('Door','door')">
+                <div class="toggle-circle"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sensors -->
+    <div class="card">
+        <h2>Real-Time Sensor Monitoring</h2>
+        <div class="sensor-container">
+            <div class="card sensor">
+                <h3>🌡️ Temperature</h3>
+                <p><span id="temp">--</span> °C</p>
+            </div>
+
+            <div class="card sensor">
+                <h3>💧 Humidity</h3>
+                <p><span id="humidity">--</span>%</p>
+            </div>
+
+            <div class="card sensor">
+                <h3>🌙 Light Level</h3>
+                <p><span id="light-level">--</span>%</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Automation Rules & Activity Logs -->
+    <div class="card-container">
+        <div class="card bordered-card">
+            <h2>Automation Rules</h2>
+            <label>
+                <input type="checkbox" id="auto-light" onchange="log('Automation: Auto Light rule toggled.')">
+                Auto ON light when dark (30%)
+            </label>
+        </div>
+
+        <div class="card bordered-card">
+            <h2>Activity Logs</h2>
+            <div id="logs"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#000000;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background: #111;
+    color: #000000;
+}
+
+body.dark-mode .device{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: 18px;
+    gap: 15px;
+    margin-bottom: 12px;
+
+    border: 2px solid #6b1e23;
+    border-radius: 8px;
+    background: #1a1a1a;
+}
+/* ------------------------------------------------- */
+/* LOGIN + SIGNUP DESIGN (YOUR FIRST CODE) */
+/* ------------------------------------------------- */
+
+.box {
+    width: 320px;
+    padding: 25px;
+    background-image: url("bg1.jpg");
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+body.dark-mode .box {
+    background: #1c1c1c;
+    color: white;
+}
+
+h2 {
+    margin-top: 0;
+    color: #97b9ec;
+    font-weight: bold;
+}
+
+body.dark-mode h2 {
+    color: rgb(0, 0, 0);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus {
+    border-color: #97b9ec;
+}
+
+/* Dark Mode for Inputs */
+body.dark-mode input {
+    background: #222;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: lightblue;
+    color: rgb(24, 23, 23);
+    border: #6b1e23;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffffff;
+}
+
+body.dark-mode button {
+    background: #333;
+    border: 1px solid #666;
+    color: white;
+}
+
+/* Links */
+.link {
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+body.dark-mode .link {
+    color: #81c784;
+}
+
+/* Toggle Switch Styling */
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #8898f1;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* ----------------------- */
+/* DARK MODE THEME */
+/* ----------------------- */
+
+body.dark-mode {
+   background-image: url("dk1.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+    color: #f4f4f4;
+}
+
+body.dark-mode .card {
+    background-color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input,
+body.dark-mode button {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+body.dark-mode #login-screen {
+    background: #1c1c1c;
+    color: #fff;
+}
+
+body.dark-mode h2 {
+    color: #ffffff;
+    text-shadow: 0 0 8px #123c6399;
+}
+
+body.dark-mode #login-box,
+body.dark-mode #signup-box {
+    background: #1c1c1c;
+    color: #fff;
+}
+
+body.dark-mode .toggle {
+    background-color: #333;
+}
+
+body.dark-mode .toggle.active {
+    background-color: #4caf50;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* Header 2 Design */
+h2 {
+    color: black;
+    text-shadow: 0 0 8px lightblue;
+}
+
+/* LOGIN SCREEN */
+#login-screen {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #6b1e23;
+    color: white;
+    flex-direction: column;
+}
+
+#login-box {
+    background: #2e1f1b;
+    padding: 60px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0005;
+}
+
+#login-box input,
+#login-box button {
+    width: 92%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: none;
+}
+
+#login-box button {
+    width: 100%;
+    background: #2986dd;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#signup-box {
+    background: #C4A484;
+    padding: 60px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.333);
+}
+
+#signup-box input,
+#signup-box button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+#signup-box button {
+    background: #933D30;
+    color: white;
+   text-shadow: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* DASHBOARD */
+#dashboard {
+    display: none;
+    padding: 20px;
+}
+
+h2 { margin-top: px; }
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #0002;
+   
+}
+
+/* Add border to each device inside the card */
+.device {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: 18px;
+    gap: 15px;
+    margin-bottom: 12px;
+
+    border: 2px solid #6b1e23; /* Green border for each device */
+    border-radius: 8px;
+    background: rgb(255, 255, 255); /* Optional: slightly different background to highlight */
+}
+
+/* TOGGLE SWITCH */
+.toggle {
+    width: 60px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle.active {
+    background: #4caf50;
+}
+
+.toggle-circle {
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.toggle.active .toggle-circle {
+    left: 32px;
+}
+
+/* ACTIVITY LOG */
+#logs {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .device {
+        font-size: 16px;
+    }
+}
+
+.sensor-container {
+    display: flex;            /* side by side */
+    gap: 20px;                /* space between cards */
+    flex-wrap: wrap;          /* wrap on small screens */
+    justify-content: space-between; /* distribute evenly */
+}
+
+.sensor {
+    border: 2px solid #6b1e23;
+    border-radius: 18px;
+    padding: 20px;
+    height: 200px;
+    flex: 1;                  /* take equal width */
+    min-width: 150px;         /* prevent shrinking too much */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;          /* put cards side by side */
+    gap: 20px;              /* small space between cards */
+    flex-wrap: wrap;        /* wrap on small screens */
+}
+
+.bordered-card {
+    border: 2px solid #6b1e23; /* green border */
+    border-radius: 18px;
+    padding: 20px;
+    flex: 1;                   /* equal width */
+    min-width: 250px;          /* prevent too small on narrow screens */
+    background: #f9f9f9;       /* optional */
+}
+
